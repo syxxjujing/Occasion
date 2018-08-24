@@ -20,7 +20,6 @@ class WechatHook : IXposedHookLoadPackage{
         Global.tryWithLog {
             if (isWechat(lpparam!!)){
                 hookApplicationAttach(lpparam.classLoader, { context ->
-                    //                        LogTool.d("BuildConfig25--->" + BuildConfig.DEBUG)
                     if (false) {
 
                         handleLoadWechat(lpparam, context)

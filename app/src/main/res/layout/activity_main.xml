@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".frontend.MainActivity">
+
+    <Button
+        android:id="@+id/btn_reboot_wechat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="重启微信"/>
+    <EditText
+        android:id="@+id/et_wxid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要拉黑的wxid"/>
+    <Button
+        android:id="@+id/btn_pull_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拉黑"/>
+
+</LinearLayout>

@@ -11,7 +11,7 @@
         android:id="@+id/btn_reboot_wechat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         android:text="重启微信"/>
     <EditText
         android:id="@+id/et_wxid"

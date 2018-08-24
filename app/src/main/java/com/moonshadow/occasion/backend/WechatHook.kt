@@ -38,7 +38,9 @@ class WechatHook : IXposedHookLoadPackage{
     }
 
     private fun handleLoadWechat(lpparam: XC_LoadPackage.LoadPackageParam, context: Context) {
+        //注意：这是kotlin代码，kotlin中"=="相当于java中的"equals"
         if (lpparam.processName=="com.tencent.mm"){
+
             //在此处注册广播！
             val intentFilter = IntentFilter().apply {
                 addAction("action_pull_black")
@@ -52,6 +54,9 @@ class WechatHook : IXposedHookLoadPackage{
         tryHook(pluginDeveloper::traceDatabase)//HOOK 微信的db
     }
 
+    /**
+     * 广播接收器
+     * */
     private val myReceiver = object :BroadcastReceiver(){
         override fun onReceive(context: Context?, intent: Intent) {
             if (intent.action=="action_pull_black"){
